@@ -10,6 +10,27 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     {{ __("You're logged in!") }}
+
+
+                        <div class="grid grid-cols-4 gap-4">
+                          <div class="card bg-white shadow-md rounded-md p-4">
+                            <h2 class="text-center text-2xl font-bold">Total Donations</h2>
+                            <p class="text-center text-gray-500">N10,000,000</p>
+                          </div>
+                          <div class="card bg-white shadow-md rounded-md p-4">
+                            <h2 class="text-center text-2xl font-bold">Donations Today</h2>
+                            <p class="text-center text-gray-500">N1,000,000</p>
+                          </div>
+                          <div class="card bg-white shadow-md rounded-md p-4">
+                            <h2 class="text-center text-2xl font-bold">Average Donation</h2>
+                            <p class="text-center text-gray-500">N10,000</p>
+                          </div>
+                          <div class="card bg-white shadow-md rounded-md p-4">
+                            <h2 class="text-center text-2xl font-bold">Number of Donors</h2>
+                            <p class="text-center text-gray-500">1000</p>
+                          </div>
+                        </div>
+
                 </div>
             </div>
         </div>
