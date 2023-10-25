@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectsController;
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Projects;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +20,10 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+
+    $projects = Projects::all();
+
+    return view('dashboard', ['projects' => $projects]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -30,6 +33,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/projects', [ProjectsController::class, 'show'])->name('projects.show');
     Route::get('/create-project', [ProjectsController::class, 'create'])->name('projects.create');
     Route::post('/store-project', [ProjectsController::class, 'Store'])->name('projects.store');
+    Route::get('/view-project/{id}', [ProjectsController::class, 'view'])->name('projects.view');
 });
 
 require __DIR__.'/auth.php';

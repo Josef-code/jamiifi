@@ -36,10 +36,17 @@ class ProjectsController extends Controller
             'description' => $request->project_description,
             'funding_goal' => $request->funding_goal,
             'category' => $request->category,
+            'media_url' => $request->media_url,
             'start_date' => $request->start_date,
             'end_date' => $request->end_date,
         ]);
 
         return redirect('/projects')->with("project_created", "Project has been created successfully!");
+    }
+
+    public function View(Request $request, $id)
+    {
+        $project = Projects::where("id", $id)->with("user")->first();
+        return view('projects/view-project', ['project' => $project]);
     }
 }

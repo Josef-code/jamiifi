@@ -18,6 +18,9 @@
                     <x-nav-link :href="route('projects.show')" :active="request()->routeIs('projects.show')">
                         {{ __('Projects') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('projects.show')" :active="request()->routeIs('projects.show')">
+                        {{ __('Withdraw') }}
+                    </x-nav-link>
                 </div>
             </div>
 

@@ -21,6 +21,7 @@ return new class extends Migration
             $table->date('start_date');
             $table->date('end_date')->nullable();
             $table->enum('project_status', ['active', 'completed', 'failed', 'pending'])->default('pending');
+            $table->string('media_url')->nullable();
             $table->string('category');
             $table->timestamps();
         });

@@ -54,7 +54,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." /></div>
+                    <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://img.freepik.com/free-photo/medium-shot-student-with-smartphone_23-2148913209.jpg?w=740&t=st=1698161892~exp=1698162492~hmac=05fc94f3873d24d048787d4691f25bc59f312735e4f5cebe9593438895d4f060" alt="..." /></div>
                 </div>
             </div>
         </header>
