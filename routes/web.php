@@ -16,7 +16,10 @@ use App\Models\Projects;
 */
 
 Route::get('/', function () {
-    return view('index');
+
+    $projects = Projects::all();
+
+    return view('index' , ['projects' => $projects] );
 });
 
 Route::get('/dashboard', function () {
