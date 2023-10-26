@@ -14,15 +14,14 @@
                     <div class="grid grid-cols-4 gap-4">
                         <div class="card bg-white shadow-md rounded-md p-4">
                             <h2 class="text-center text-2xl font-bold">Total Donations</h2>
-                            <p class="text-center text-gray-500">N10,000,000</p>
+
+                            @if($numberOfContributions > 0)
+                            <p class="text-center text-gray-500">{{ $numberOfContributions }}</p>
+                            @endif
                         </div>
                         <div class="card bg-white shadow-md rounded-md p-4">
-                            <h2 class="text-center text-2xl font-bold">Donations Today</h2>
+                            <h2 class="text-center text-2xl font-bold">Total amount</h2>
                             <p class="text-center text-gray-500">N1,000,000</p>
-                        </div>
-                        <div class="card bg-white shadow-md rounded-md p-4">
-                            <h2 class="text-center text-2xl font-bold">Average Donation</h2>
-                            <p class="text-center text-gray-500">N10,000</p>
                         </div>
                         <div class="card bg-white shadow-md rounded-md p-4">
                             <h2 class="text-center text-2xl font-bold">Number of Donors</h2>

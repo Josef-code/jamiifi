@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectsController;
+use App\Models\Contributions;
 use Illuminate\Support\Facades\Route;
 use App\Models\Projects;
 /*
@@ -25,8 +26,10 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
 
     $projects = Projects::all();
+    $Contributions = Contributions::where('contributor_id', auth()->user()->id)->get();
+    $numberOfContributions = count($Contributions);
 
-    return view('dashboard', ['projects' => $projects]);
+    return view('dashboard', ['projects' => $projects, 'numberOfContributions' => $numberOfContributions]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
